@@ -5,10 +5,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # if you use LocalStorage operator, edit and configure the patch
-  - jpena-hub-overlay/lso/
+  # - jpena-hub-overlay/lso/
+  # Using the LVMS operator, with storageClass "lvms-vg1"
 
   # if you use ODF, edit and configure storage settings
-  - jpena-hub-overlay/odf/
+  #- jpena-hub-overlay/odf/
 
   # other not optional overlays
   - jpena-hub-overlay/gitops/
@@ -25,4 +26,3 @@ resources:
   # installation and configuration
   # - reference-crs/required/gitops/ztp-installation
   - https://github.com/openshift-kni/telco-reference/telco-hub/configuration/reference-crs/required/gitops/ztp-installation?ref=release-4.20
-

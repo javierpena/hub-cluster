@@ -3,7 +3,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../reference-crs/optional/logging/
+  # - ../../reference-crs/optional/logging/
+  - https://github.com/openshift-kni/telco-reference/telco-hub/configuration/reference-crs/optional/logging?ref=release-4.20
 
 patches:
   # Customize ClusterLogForwarder for hub-specific configuration
