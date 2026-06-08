@@ -1,0 +1,8 @@
+---
+- op: replace
+  path: "/spec/source"
+  value:
+    path: "/main/telco-ran/configuration/argocd/example/clusterinstance"
+    repoURL: "https://github.com/openshift-kni/telco-reference"
+    targetRevision: "main"
+
