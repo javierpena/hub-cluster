@@ -13,12 +13,6 @@ patches:
       kind: Application
       name: hub-config
     path: init-argocd-app.yaml
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
-      name: openshift-gitops-operator
-    path: argocd-subs.yaml
 #  - target:
 #      group: ""
 #      version: v1

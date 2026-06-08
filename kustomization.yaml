@@ -14,7 +14,7 @@ resources:
   # other not optional overlays
   - jpena-hub-overlay/gitops/
   - jpena-hub-overlay/acm/
-  #- jpena-hub-overlay/registry/
+  - jpena-hub-overlay/registry/
 
   # mandatory resources not managed by any overlay
   #- reference-crs/required/talm/
@@ -26,11 +26,3 @@ resources:
   # installation and configuration
   # - reference-crs/required/gitops/ztp-installation
   - https://github.com/openshift-kni/telco-reference/telco-hub/configuration/reference-crs/required/gitops/ztp-installation?ref=release-4.20
-
-patches:
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
-      name: openshift-topology-aware-lifecycle-manager-subscription
-    path: jpena-hub-overlay/acm/acm-subs.yaml

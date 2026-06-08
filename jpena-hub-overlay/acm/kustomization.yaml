@@ -32,10 +32,3 @@ patches:
 #      kind: ConfigMap
 #      name: mirror-registry-config
 #    path: acmMirrorRegistryCM-patch.yaml
-
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
-      name: open-cluster-management-subscription
-    path: acm-subs.yaml
