@@ -64,10 +64,10 @@ patches:
       version: v1alpha1
       kind: Application
       name: clusters
-    path: gitops/clusters-app.yaml
+    path: jpena-hub-overlay/gitops/clusters-app.yaml
   - target:
       group: argoproj.io
       version: v1alpha1
       kind: Application
       name: policies
-    path: gitops/policies-app.yaml
+    path: jpena-hub-overlay/gitops/policies-app.yaml
