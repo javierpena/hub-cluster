@@ -14,7 +14,7 @@ resources:
   # other not optional overlays
   - jpena-hub-overlay/gitops/
   - jpena-hub-overlay/acm/
-  - jpena-hub-overlay/registry/
+  #- jpena-hub-overlay/registry/
 
   # mandatory resources not managed by any overlay
   #- reference-crs/required/talm/
@@ -26,3 +26,36 @@ resources:
   # installation and configuration
   # - reference-crs/required/gitops/ztp-installation
   - https://github.com/openshift-kni/telco-reference/telco-hub/configuration/reference-crs/required/gitops/ztp-installation?ref=release-4.20
+
+# Use the following for a connected environment
+patches:
+# from the reference we make it connected
+  - target:
+      group: operators.coreos.com
+      version: v1alpha1
+      kind: Subscription
+    patch: |-
+      - op: replace
+        path: /spec/source
+        value: redhat-operators
+  - target:
+      group: operator.open-cluster-management.io
+      version: v1
+      kind: MultiClusterHub
+      name: multiclusterhub
+    patch: |-
+      - op: replace
+        path: /metadata/annotations/installer.open-cluster-management.io~1mce-subscription-spec
+        value: '{"source": "redhat-operators", "installPlanApproval": "Automatic"}'
+      - op: replace
+        path: /metadata/annotations/installer.open-cluster-management.io~1oadp-subscription-spec
+        value: '{"source": "redhat-operators", "installPlanApproval": "Automatic"}'
+  - target:
+      group: config.openshift.io
+      version: v1
+      kind: OperatorHub
+      name: cluster
+    patch: |-
+      - op: replace
+        path: /spec/disableAllDefaultSources
+        value: false
