@@ -19,18 +19,6 @@ patches:
       kind: Subscription
       name: openshift-gitops-operator
     path: argocd-subs.yaml
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
-      name: openshift-topology-aware-lifecycle-manager-subscription
-    path: argocd-subs.yaml
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
-      name: open-cluster-management-subscription
-    path: argocd-subs.yaml
 #  - target:
 #      group: ""
 #      version: v1
