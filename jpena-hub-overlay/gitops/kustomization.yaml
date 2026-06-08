@@ -18,9 +18,7 @@ patches:
       version: v1alpha1
       kind: Subscription
       name: openshift-gitops-operator
-    op: replace
-      path: "/spec/source"
-      value: "redhat-operators"
+    path: argocd-subs.yaml
 #  - target:
 #      group: ""
 #      version: v1
