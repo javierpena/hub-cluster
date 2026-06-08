@@ -14,7 +14,7 @@ resources:
   # other not optional overlays
   - jpena-hub-overlay/gitops/
   - jpena-hub-overlay/acm/
-  - jpena-hub-overlay/registry/
+  #- jpena-hub-overlay/registry/
 
   # mandatory resources not managed by any overlay
   #- reference-crs/required/talm/
