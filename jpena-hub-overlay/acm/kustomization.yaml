@@ -37,11 +37,5 @@ patches:
       group: operators.coreos.com
       version: v1alpha1
       kind: Subscription
-      name: openshift-topology-aware-lifecycle-manager-subscription
-    path: acm-subs.yaml
-  - target:
-      group: operators.coreos.com
-      version: v1alpha1
-      kind: Subscription
       name: open-cluster-management-subscription
     path: acm-subs.yaml
