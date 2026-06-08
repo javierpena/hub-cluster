@@ -32,3 +32,11 @@ patches:
 #      kind: ConfigMap
 #      name: mirror-registry-config
 #    path: acmMirrorRegistryCM-patch.yaml
+
+  # Disable provisioning network
+  - target:
+      group: metal3.io
+      version: v1alpha1
+      kind: Provisioning
+      name: provisioning-configuration
+    path: acm-disable-provisioning-network.yaml
