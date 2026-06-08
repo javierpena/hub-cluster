@@ -19,15 +19,3 @@ patches:
 #      kind: ConfigMap
 #      name: argocd-tls-certs-cm
 #    path: argocd-tls-certs-cm-patch.yaml
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: Application
-      name: clusters
-    path: clusters-app.yaml
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: Application
-      name: policies
-    path: policies-app.yaml
